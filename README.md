@@ -1,98 +1,80 @@
-# Ferramenta de Modelos de Resposta – Suporte Aprenda Mais
+# SAM – Suporte Aprenda Mais
 
-Esta ferramenta ajuda a equipe a encontrar e copiar rapidamente os modelos de e-mail do Manual de Suporte, em vez de procurar no documento compartilhado.
+Aplicação web para localizar modelos de e-mail do Manual de Suporte, personalizar texto com dados do cursista e, quando necessário, editar o conteúdo e exportar o `respostas.json` para o repositório (ex.: deploy na Vercel).
 
-## Como usar
+## Como abrir
 
-1. **Abrir a ferramenta**  
-   Abra o arquivo `atendimento-respostas.html` no navegador.
-
-2. **Se os temas não carregarem**  
-   Alguns navegadores bloqueiam o carregamento de arquivos locais. Nesse caso:
-   - Abra um terminal/prompt na pasta **Suporte**.
-   - Execute: `python -m http.server 8080`
-   - No navegador acesse: **http://localhost:8080/atendimento-respostas.html**
-
-3. **Fluxo**
-   - **Passo 1:** Clique em um **tema** (ex.: "EXCLUIR conta").
-   - **Passo 2:** Clique em um **subtema** (ex.: "Se a conta não foi confirmada" ou "Solicitação de excluir conta pelo sistema").
-   - **Passo 3:** Veja o(s) modelo(s) de resposta e use **Copiar** para colar no e-mail (Ctrl+Shift+V para colar sem formatação, conforme o manual).
-
-## Quando o Manual for atualizado
-
-O manual é mantido no Google Docs e pode ser exportado/atualizado de tempos em tempos.
-
-1. Atualize o arquivo do manual nesta pasta:
-   - Mantenha uma cópia em **Markdown** (`.md`) com o mesmo nome base: `Manual Suporte - Atualizado - janeiro _ 2025.md` (ou atualize o nome no script, se preferir).
-2. Na pasta **Suporte**, execute:
+1. **Página principal:** `index.html` (carrega `styles.css` e `script.js`).
+2. **Servidor local (recomendado):** muitos navegadores bloqueiam `fetch` em `file://`. Na pasta do projeto:
    ```bash
-   python gerar_respostas.py
+   python -m http.server 8080
    ```
-3. Recarregue a página `atendimento-respostas.html` no navegador.
+   Acesse: **http://localhost:8080/index.html**
 
-O script lê o `.md`, extrai temas, subtemas e textos das tabelas de resposta e regera o arquivo `respostas.json`, que a página HTML utiliza.
 
-### Opção gratuita: HTML exportado do Google Docs (com formatação)
+## Fluxo de uso
 
-**Sem API, sem Google Cloud, sem custo.** Basta exportar o documento como página da web e rodar o script no arquivo:
+1. **Dados do cursista (opcional)**  
+   Cole no campo superior o texto no formato dos e-mails (campos como `Nome`, `Email`, `Cpf`, `Curso turma`, `Mensagem`, etc.). A aplicação interpreta os campos e pode:
+   - usar o **primeiro nome** no lugar de `Caro(a) aluno(a)`;
+   - preencher **assinatura** com `(escreva seu nome)` a partir do campo de assinatura;
+   - abrir **Dossiê CPF** e **Dossiê E-mail** (links do MEC) quando houver CPF/e-mail;
+   - extrair **curso** e **turma** a partir de `Curso turma` (ver abaixo).
 
-1. No Google Docs, abra o Manual de Suporte.
-2. **Arquivo → Fazer download → Página da Web (.html)** e salve (ex.: `Manual Suporte.html`) na pasta do projeto.
-3. Instale a dependência e execute:
-   ```bash
-   pip install -r requirements-html.txt
-   python gerar_respostas_html.py
-   ```
-   Ou: `python gerar_respostas_html.py --arquivo "Manual Suporte.html" --saida respostas.json`
-4. O script gera o mesmo `respostas.json` com **`texto`** e **`texto_html`**, preservando quebras de linha, negrito, cor e demais formatações do HTML exportado.
+2. **Assinatura**  
+   Campo salvo no navegador (`localStorage`) e aplicado aos modelos.
 
-### Opção gratuita: DOCX exportado do Google Docs (com formatação, estrutura limpa)
+3. **Temas e subtemas**  
+   Escolha o tema → subtema → visualize os modelos.
 
-**Recomendado se o HTML exportado estiver confuso.** O DOCX tem estrutura bem definida (títulos, tabelas) e o script preserva formatação:
+4. **Copiar**  
+   Copia texto plano e HTML quando o modelo tem `texto_html` (útil para colar em clientes de e-mail com formatação).
 
-1. No Google Docs, abra o Manual de Suporte.
-2. **Arquivo → Fazer download → Microsoft Word (.docx)** e salve (ex.: `Manual Suporte.docx`) na pasta do projeto.
-3. Instale a dependência e execute:
-   ```bash
-   pip install -r requirements-docx.txt
-   python gerar_respostas_docx.py
-   ```
-   Ou: `python gerar_respostas_docx.py --arquivo "Manual Suporte.docx" --saida respostas.json`
-4. O script gera o mesmo `respostas.json` com **`texto`** e **`texto_html`** (negrito, cor, quebras de linha). Use **Título 1** e **Título 2** no documento para temas e subtemas.
+## Placeholders nos modelos (`respostas.json`)
 
-### Opção: buscar direto do Google Docs via API (com formatação)
+Com dados do cursista preenchidos, o script substitui:
 
-Se quiser **puxar o manual direto do Google Docs** e **manter quebras de linha, recuos, negrito e cor** nas respostas:
+| Placeholder | Origem |
+|-------------|--------|
+| `(escreva seu nome)` | Campo **Assinatura** |
+| `Caro(a) aluno(a)` | Primeiro nome (campo **Nome**) |
+| `[NOME DO CURSO]` | Nome do curso normalizado (sem “turma”, sem sufixo de ano/turma no final) |
+| `[DATA ENCERRAMENTO]` | Calculado a partir da **turma** (ex.: `2025A` → `31/07/2025`; `2024B` → `31/01/2025`). Turma só com ano (ex.: `2023`) não gera data. |
 
-1. **Google Cloud:** crie um projeto, ative a **Google Docs API**, crie uma **Service Account** e baixe o JSON de chave.
-2. Coloque o arquivo de credenciais na pasta do projeto como `credentials.json` (ou use `--credenciais caminho/arquivo.json`).
-3. **Compartilhe o documento do Google Docs** com o e-mail da service account (ex.: `xxx@projeto.iam.gserviceaccount.com`) dando permissão de **Visualizador**.
-4. Instale as dependências e execute:
-   ```bash
-   pip install -r requirements-google-docs.txt
-   python gerar_respostas_google_docs.py --url "https://docs.google.com/document/d/ID_DO_DOC/edit"
-   ```
-   Ou use `--doc-id ID_DO_DOC` em vez de `--url`.
-5. O script gera o mesmo `respostas.json`, agora com o campo **`texto_html`** em cada resposta (além de `texto`), preservando formatação. A página pode usar esse campo para exibir e copiar com formatação.
+### Campo “Curso turma”
 
-## Arquivos
+- Remove a palavra **turma** e capitaliza a primeira letra do nome do curso.
+- Se no **final** houver **ano + letra(s)** (`2025B`, `2024 A`, etc.), separa em `curso` e `turma` (compacto, ex.: `2024A`).
+- Se no **final** houver **só o ano** (`Epidemiologia turma 2023`), o curso fica **Epidemiologia** e a turma **`2023`**.
+
+## Edição dos modelos e exportação do JSON
+
+- Em cada resposta há **Editar**: abre o HTML em um **textarea** com quebras legíveis entre tags; ao **Salvar**, o HTML é **compactado** (sem espaços extras entre tags) e guardado no **localStorage** como ajuste sobre o JSON carregado.
+   
+   >Futuramente será implementado um editor HTML simples para facilitar a edição das respostas.
+
+- **Baixar JSON** gera um `respostas.json` mesclado (base + edições locais) para substituir o arquivo na raiz do projeto e fazer **push** no Git.
+- **Limpar edições** remove todos os overrides locais.
+- Badge **editado — restaurar** por resposta desfaz só aquela edição.
+
+Chaves no `localStorage`: `atendimento-aprendamais-nome` (assinatura), `atendimento-aprendamais-edits` (edições).
+
+## Estrutura de `respostas.json`
+
+- **`texto`:** versão em texto plano (markdown simples tratado na cópia); usada como `text/plain` na área de transferência e fallback se não houver HTML.
+- **`texto_html`:** HTML do modelo; usado para exibir e para `text/html` na cópia quando existir.
+
+## Arquivos principais
 
 | Arquivo | Função |
-|--------|--------|
-| `atendimento-respostas.html` | Página com botões (tema → subtema) e “Copiar” para os modelos. |
-| `respostas.json` | Dados extraídos do manual (gerado por um dos scripts). |
-| `gerar_respostas.py` | Script que lê o Manual em `.md` e gera `respostas.json`. |
-| `gerar_respostas_html.py` | **Gratuito.** Lê um HTML exportado do Google Docs (Fazer download → Página da Web) e gera `respostas.json` com `texto_html`. |
-| `gerar_respostas_docx.py` | **Gratuito.** Lê um DOCX exportado (Fazer download → Microsoft Word). Estrutura limpa; preserva negrito, cor e quebras. |
-| `gerar_respostas_google_docs.py` | Lê o Manual **direto do Google Docs (API)** e gera `respostas.json` com `texto_html`. Requer Google Cloud. |
-| `requirements-html.txt` | Dependência para o script HTML (BeautifulSoup). |
-| `requirements-docx.txt` | Dependência para o script DOCX (python-docx). |
-| `requirements-google-docs.txt` | Dependências para o script do Google Docs (API). |
-| `credentials.json` | (Opcional) Chave da Service Account do Google Cloud, para usar o script do Google Docs. |
-| `Manual Suporte.html` | (Opcional) HTML exportado (Fazer download → Página da Web), fonte para `gerar_respostas_html.py`. |
-| `Manual Suporte.docx` | (Opcional) DOCX exportado (Fazer download → Microsoft Word), fonte para `gerar_respostas_docx.py`. |
-| `Manual Suporte - Atualizado - janeiro _ 2025.md` | Cópia do manual em Markdown (fonte dos dados para `gerar_respostas.py`). |
+|---------|--------|
+| `index.html` | Página da aplicação (SAM). |
+| `script.js` | Lógica: navegação, cursista, assinatura, cópia, edição, download do JSON. |
+| `styles.css` | Estilos. |
+| `respostas.json` | Dados dos temas, subtemas e respostas. |
 
----
+## Atualizar o conteúdo a partir do Manual
 
-*Lembrete do manual: assine com seu nome no e-mail e use assunto [Suporte Aprenda Mais] quando aplicável.*
+O arquivo base das respostas pode ser obtido a partir do manual mantido no Google Docs. Para regerar `respostas.json` utilizar as indicações abaixo:
+
+- **DOCX:** `gerar_respostas_docx.py` + `requirements-docx.txt` (Título 1 = tema, Título 2 = subtema).

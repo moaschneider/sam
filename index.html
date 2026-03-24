@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SAM – Suporte Aprenda Mais</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>SAM</h1>
+      <!-- <p class="subtitle">Modelos de respostas · Escolha o tema e o subtema para copiar o modelo de e-mail</p> -->
+    </header>
+
+    <div id="erro-box" class="erro-carregamento oculto">
+      <p><strong>Não foi possível carregar os modelos.</strong></p>
+      <p>Verifique se o arquivo <code>respostas.json</code> está na mesma pasta que esta página. Se você abriu o arquivo HTML direto no navegador (file://), o navegador pode bloquear o carregamento. Nesse caso, use um servidor local na pasta do projeto:</p>
+      <p><code>python -m http.server 8080</code></p>
+      <p>Depois acesse: <code>http://localhost:8080/atendimento-respostas.html</code></p>
+    </div>
+
+    <div id="app">
+      <div class="cursista-section">
+        <label for="input-cursista">Cole aqui os dados do e-mail do cursista:</label>
+        <textarea id="input-cursista" class="cursista-textarea" rows="10"
+        placeholder=""></textarea>
+        <div id="cursista-campos" class="cursista-campos oculto">
+          <span id="cursista-nome" class="cursista-nome"></span>
+          <button type="button" class="btn btn-dossie" id="btn-dossie-cpf" title="Abrir dossiê por CPF">Dossiê CPF</button>
+          <button type="button" class="btn btn-dossie" id="btn-dossie-email" title="Abrir dossiê por e-mail">Dossiê E-mail</button>
+          <!-- <input type="text" id="input-curso" class="cursista-curso-input" placeholder="Curso / turma" /> -->
+        </div>
+      </div>
+      
+      <div class="toolbar-row">
+        <div>
+          <button type="button" class="btn btn-download-json" id="btn-download-json">Baixar JSON</button>
+          <button type="button" class="btn btn-cancelar-edicao" id="btn-limpar-edits" style="display:none">Limpar edições</button>
+        </div>
+        <div class="assinatura-row">
+          <!-- <label for="input-assinatura">Assinatura:</label> -->
+          <input type="text" id="input-assinatura" placeholder="Assinatura" autocomplete="name" />
+        </div>
+      </div>
+
+      <div id="passo-temas">
+        <p class="step-label">1. Escolha o tema</p>
+        <div id="lista-temas" class="nav-buttons"></div>
+      </div>
+
+      <div id="passo-subtemas" class="oculto">
+        <button type="button" class="btn btn-voltar" id="btn-voltar-temas">← Voltar aos temas</button>
+        <p class="step-label">2. Escolha o subtema</p>
+        <div id="lista-subtemas" class="nav-buttons"></div>
+      </div>
+
+      <div id="passo-respostas" class="oculto">
+        <button type="button" class="btn btn-voltar" id="btn-voltar-subtemas">← Voltar ao subtema</button>
+        <p class="step-label">3. Modelo(s) de resposta – clique em Copiar e cole no e-mail</p>
+        <div id="area-respostas" class="respostas-area"></div>
+      </div>
+    </div>
+
+    <p class="aviso-pasta">
+      Para atualizar as respostas, clique no botão "Editar" posicionado abaixo de cada resposta. Utilize tags HTML para formatar o texto. Após realizar as alterações, clique em "Baixar JSON" para exportar aquivo. Substitua o arquivo "respostas.json" na pasta raiz do projeto e faça um push no repositório.
+    </p>
+
+    <footer>
+      Desenvolvido por Moa Schneider • Versão 1.0
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

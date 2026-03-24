@@ -110,14 +110,16 @@
         cursoCursista = (campos.curso || campos.curso_turma || '').trim();
         turmaCursista = (campos.turma || '').trim();
 
-        if (nomeCursista || cpfCursista || emailCursista) {
+        var temAlgumDadoCursista = !!(nomeCursista || cpfCursista || emailCursista);
+        if (temAlgumDadoCursista) {
           cursistaCamposEl.classList.remove('oculto');
-          cursistaNomeEl.textContent = nomeCursista ? nomeCursista : '';
-          btnDossieCpf.style.display = cpfCursista ? '' : 'none';
-          btnDossieEmail.style.display = emailCursista ? '' : 'none';
         } else {
           cursistaCamposEl.classList.add('oculto');
         }
+        cursistaNomeEl.textContent = nomeCursista || '';
+        cursistaNomeEl.style.display = nomeCursista ? '' : 'none';
+        btnDossieCpf.style.display = cpfCursista ? '' : 'none';
+        btnDossieEmail.style.display = emailCursista ? '' : 'none';
 
         if (subtemaAtual && !passoRespostas.classList.contains('oculto')) {
           renderRespostas();

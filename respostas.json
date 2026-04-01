@@ -2,11 +2,11 @@
   "temas": [
     {
       "id": "INSC",
-      "titulo": "INSCRIÇÃO NA PLATAFORMA",
+      "titulo": "INSCRIÇÃO",
       "subtemas": [
         {
           "id": "0001",
-          "titulo": "Criar conta, fazer inscrição",
+          "titulo": "Criar conta / fazer inscrição",
           "respostas": [
             {
               "rotulo": "Para fazer inscrição",

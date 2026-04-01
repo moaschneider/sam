@@ -7,3 +7,10 @@ dossie.txt
 emails-cursistas.txt
 respostas_backup.json
 respostas_backup2.json
+
+# Ignora pasta .cursor
+.cursor/*
+
+# Mantém versionamento apenas das rules do projeto
+!.cursor/rules/
+!.cursor/rules/**

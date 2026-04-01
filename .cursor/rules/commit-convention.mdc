@@ -1,0 +1,103 @@
+---
+alwaysApply: true
+---
+
+# Padrão de Commits
+
+## Formato completo
+
+```
+tipo(escopo): Título resumido do que foi feito
+- Descrição específica da alteração 1
+- Descrição específica da alteração 2
+- Descrição específica da alteração 3
+```
+
+## Formato curto (alterações simples)
+
+```
+tipo(escopo): Descrição direta da alteração
+```
+
+## Tipos de alteração
+
+| Tipo     | Uso                                                 |
+|----------|-----------------------------------------------------|
+| feat     | Nova funcionalidade                                 |
+| fix      | Correção de bug ou comportamento incorreto          |
+| update   | Melhoria ou ajuste em algo já existente             |
+| style    | Alterações visuais/CSS que não afetam lógica        |
+| refactor | Reestruturação de código sem mudar comportamento    |
+| docs     | Documentação (README, comentários, etc.)            |
+| chore    | Tarefas de manutenção (configs, dependências, etc.) |
+| revert   | Reversão de um commit anterior                      |
+| perf     | Melhoria de performance                             |
+| test     | Adição ou ajuste de testes                          |
+| remove   | Remoção de código, arquivos ou funcionalidades      |
+| data     | Alterações em arquivos de dados (JSON, CSV, etc.)   |
+
+## Escopos do projeto
+
+| Escopo  | Uso                                     |
+|---------|-----------------------------------------|
+| ui      | Interface visual em geral               |
+| layout  | Estrutura e posicionamento de elementos |
+| nav     | Navegação / menu                        |
+| sidebar | Barra lateral especificamente           |
+| header  | Cabeçalho                               |
+| footer  | Rodapé                                  |
+| form    | Formulários e inputs                    |
+| modal   | Janelas/modais                          |
+| data    | Dados / JSON                            |
+| script  | Lógica JavaScript                       |
+| api     | Integração com APIs                     |
+| auth    | Autenticação                            |
+| config  | Arquivos de configuração                |
+| deps    | Dependências                            |
+| a11y    | Acessibilidade                          |
+| i18n    | Internacionalização / tradução          |
+| mobile  | Responsividade / comportamento mobile   |
+
+## Exemplos aplicados a este projeto
+
+### Formato curto:
+
+```
+style(sidebar): Remove bordas e fundo dos headers do accordion
+```
+```
+style(nav): Altera subtema ativo para formato pill arredondado
+```
+```
+fix(nav): Corrige corte de subtemas em temas com mais de 15 itens
+```
+```
+data(respostas): Atualiza modelos de resposta do tema CERTIFICADO
+```
+
+### Formato completo:
+
+```
+feat(layout): Remodela aplicação com layout de duas colunas
+
+- Adiciona sidebar fixa à esquerda com accordion de temas
+- Move logo para header superior centralizado
+- Centraliza todo o conteúdo com page-wrapper de max-width 1100px
+- Mantém comportamento de drawer no mobile abaixo de 820px
+```
+
+```
+update(script): Melhora renderização das respostas com tags HTML
+
+- Diferencia textos HTML de texto plano com classes distintas
+- Adiciona estilos para p, ul, ol e li dentro das respostas
+- Preserva white-space: pre-wrap apenas para textos sem HTML
+```
+
+
+## Regras gerais
+
+- Título em **português**, letra minúscula após os dois pontos
+- Sem ponto final no título
+- Lista de tópicos com -, sem ponto final em cada item
+- Ser específico o suficiente para entender a alteração sem abrir o diff

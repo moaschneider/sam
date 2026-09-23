@@ -177,9 +177,9 @@
   function aplicarAssinatura(str) {
     if (!str) return str;
     var nome = nomeAssinatura ? nomeAssinatura.trim() : '(escreva seu nome)';
-    str = str.replace(/\(escreva seu nome\)/gi, nome);
+    str = str.replace(/\((?:escreva seu nome|nome do atendente)\)/gi, nome);
     if (nomeCursista) {
-      str = str.replace(/Caro\(a\) aluno\(a\)/g, nomeCursista);
+      str = str.replace(/Caro\(a\) (?:aluno\(a\)|cursista)/g, nomeCursista);
     }
     if (cursoCursista) {
       str = str.replace(/\[NOME DO CURSO\]/gi, cursoCursista);

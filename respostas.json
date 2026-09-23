@@ -189,8 +189,8 @@
             },
             {
               "rotulo": "Quando identificar que a email cadastrado é igual ao email enviado",
-              "texto": "Caro(a) aluno(a), bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!Você pode solicitar, por meio da opção Perdeu a senha?, uma nova senha e a informação de seu login.Assim que os dados forem validados, você receberá, por e-mail, um link para redefinir sua senha.Caso a dificuldade continue, entre novamente em contato.Atenciosamente,(escreva seu nome)",
-              "texto_html": "<p>Caro(a) aluno(a), bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!</p><p>Você pode solicitar, por meio da opção <a href=\"https://aprendamais.mec.gov.br/login/forgot_password.php\" target=\"_blank\">Perdeu a senha?</a>, uma nova senha e a informação de seu login.</p><p>Assim que os dados forem validados, você receberá, por e-mail, um link para redefinir sua senha.</p><p>Caso a dificuldade continue, entre novamente em contato.</p><p>Atenciosamente,<br>(escreva seu nome)</p>"
+              "texto": "Caro(a) aluno(a), bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!Você pode solicitar, por meio da opção Perdeu a senha?\n, uma nova senha e a informação de seu login.Assim que os dados forem validados, você receberá, por e-mail, um link para redefinir sua senha.Caso a dificuldade continue, entre novamente em contato.Atenciosamente,(escreva seu nome)",
+              "texto_html": "<p>Caro(a) aluno(a), bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!</p><p>Você pode solicitar, por meio da opção <a href=\"https://aprendamais.mec.gov.br/login/forgot_password.php\" target=\"_blank\">Perdeu a senha?</a>\n, uma nova senha e a informação de seu login.</p><p>Assim que os dados forem validados, você receberá, por e-mail, um link para redefinir sua senha.</p><p>Caso a dificuldade continue, entre novamente em contato.</p><p>Atenciosamente,<br>(escreva seu nome)</p>"
             },
             {
               "rotulo": "SE O E-MAIL JÁ FOR USADO POR OUTRO USUÁRIO\nNão pode utilizar o mesmo e-mail para dois usuários.",
@@ -232,8 +232,8 @@
           "respostas": [
             {
               "rotulo": "Ex.: Solicitou troca de e-mail pela opção Minha dúvida é outra / Excluir conta / etc.",
-              "texto": "Caro(a) aluno(a), bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!\nA solicitação de alteração de e-mail deve ser enviada pelo suporte no menu ACESSO: E-mail errado / perdi acesso ao e-mail.\nAtenciosamente,\n(escreva seu nome)",
-              "texto_html": "<p>Caro(a) aluno(a), bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!</p><p>A solicitação de alteração de e-mail deve ser enviada pelo suporte no menu . </p><p>Atenciosamente,<br>(escreva seu nome)</p>"
+              "texto": "Caro(a) aluno(a), bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!A solicitação de alteração de e-mail deve ser enviada pelo suporte no menu Atualizar e-mail cadastrado na plataforma. Atenciosamente,(escreva seu nome)",
+              "texto_html": "<p>Caro(a) aluno(a), bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!</p><p>A solicitação de alteração de e-mail deve ser enviada pelo suporte no menu <a href=\"https://aprendamais.mec.gov.br/mod/page/view.php?id=134111\" target=\"_blank\">Atualizar e-mail cadastrado na plataforma</a>. </p><p>Atenciosamente,<br>(escreva seu nome)</p>"
             }
           ]
         }
@@ -361,8 +361,8 @@
           "respostas": [
             {
               "rotulo": null,
-              "texto": "Caro(a) aluno(a), bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!\nVocê pode solicitar para o Suporte, via ACESSO: recuperar senha, nova senha e a informação de seu login.\nCaso a dificuldade continue, entre novamente em contato.\nAtenciosamente,\n(escreva seu nome)",
-              "texto_html": "<p>Caro(a) aluno(a), bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!</p><p>Você pode solicitar para o Suporte, via , nova senha e a informação de seu login.</p><p>Caso a dificuldade continue, entre novamente em contato.</p><p>Atenciosamente,<br>(escreva seu nome)</p>"
+              "texto": "Caro(a) aluno(a), bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!Você pode solicitar, por meio da opção Perdeu a Senha?, nova senha e a informação de seu login.Assim que os dados forem validados, você receberá, por e-mail, um link para redefinir sua senha.Caso a dificuldade continue, entre novamente em contato.Atenciosamente,(escreva seu nome)",
+              "texto_html": "<p>Caro(a) aluno(a), bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!</p><p>Você pode solicitar, por meio da opção <a href=\"https://aprendamais.mec.gov.br/login/forgot_password.php\" target=\"_blank\">Perdeu a Senha?</a>, nova senha e a informação de seu login.</p><p>Assim que os dados forem validados, você receberá, por e-mail, um link para redefinir sua senha.</p><p>Caso a dificuldade continue, entre novamente em contato.</p><p>Atenciosamente,<br>(escreva seu nome)</p>"
             },
             {
               "rotulo": null,
@@ -371,8 +371,8 @@
             },
             {
               "rotulo": null,
-              "texto": "Caro(a) aluno(a), bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!\nGeramos uma senha provisória para você. Após o primeiro acesso é obrigatório trocar para outra senha de sua preferência. Copie e cole a senha abaixo para acessar a Plataforma Aprenda Mais:\nLogin:\nSenha:\nAtenciosamente,\n(escreva seu nome)",
-              "texto_html": "<p>Caro(a) aluno(a), bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!</p><p>Geramos uma senha provisória para você. Após o primeiro acesso é <b>obrigatório</b> trocar para outra senha de sua preferência. Copie e cole a senha abaixo para acessar a Plataforma Aprenda Mais:</p><p>Login: </p><p>Senha: </p><p>Atenciosamente,<br>(escreva seu nome)</p>"
+              "texto": "Caro(a) aluno(a), bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!Geramos uma senha provisória para você. Após o primeiro acesso é obrigatório trocar para outra senha de sua preferência. Copie e cole a senha abaixo para acessar a Plataforma Aprenda Mais:Login:Senha:Atenciosamente,(escreva seu nome)",
+              "texto_html": "<p>Caro(a) aluno(a), bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!</p><p>Geramos uma senha provisória para você. Após o primeiro acesso é <b>obrigatório</b> trocar para outra senha de sua preferência. Copie e cole a senha abaixo para acessar a Plataforma Aprenda Mais:</p><p>Login:<br>Senha:</p><p>Atenciosamente,<br>(escreva seu nome)</p>"
             }
           ]
         },
@@ -458,8 +458,8 @@
           "respostas": [
             {
               "rotulo": null,
-              "texto": "Caro(a) aluno(a), bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!Se você identificou que seus dados estão errados, tudo que precisa fazer para corrigir é:Acesse a Plataforma Aprenda Mais\n com seu login e senha;Clique no seu nome no canto superior direito;Clique em Perfil e localize: Modificar perfil;Faça as correções necessárias; eNo final da página, clique em Atualizar perfil.Pronto! Seus dados foram atualizados.Para outras dúvidas, consulte nossa área de Perguntas Frequentes.Atenciosamente,(escreva seu nome)",
-              "texto_html": "<p>Caro(a) aluno(a), bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!</p><p>Se você identificou que seus dados estão errados, tudo que precisa fazer para corrigir é:</p><ol><li>Acesse a <a href=\"https://aprendamais.mec.gov.br\" target=\"_blank\">Plataforma Aprenda Mais</a>\n com seu login e senha;</li><li>Clique no seu nome no canto superior direito;</li><li>Clique em Perfil e localize: Modificar perfil;</li><li>Faça as correções necessárias; e</li><li>No final da página, clique em Atualizar perfil.</li></ol><p>Pronto! Seus dados foram atualizados.</p><p>Para outras dúvidas, consulte nossa área de <a href=\"https://aprendamais.mec.gov.br/mod/page/view.php?id=134111\" target=\"_blank\">Perguntas Frequentes</a>.</p><p>Atenciosamente,<br>(escreva seu nome)</p>"
+              "texto": "Caro(a) aluno(a), bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!Se você identificou que seus dados estão errados, tudo que precisa fazer para corrigir é:Acesse a Plataforma Aprenda Mais\n com seu login e senha;Clique no seu nome no canto superior direito;Clique em Perfil e localize: Modificar perfil;Faça as correções necessárias; eNo final da página, clique em Atualizar perfil.Pronto! Seus dados foram atualizados.Para outras dúvidas, consulte nossa área de Perguntas Frequentes\n.Atenciosamente,(escreva seu nome)",
+              "texto_html": "<p>Caro(a) aluno(a), bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!</p><p>Se você identificou que seus dados estão errados, tudo que precisa fazer para corrigir é:</p><ol><li>Acesse a <a href=\"https://aprendamais.mec.gov.br\" target=\"_blank\">Plataforma Aprenda Mais</a>\n com seu login e senha;</li><li>Clique no seu nome no canto superior direito;</li><li>Clique em Perfil e localize: Modificar perfil;</li><li>Faça as correções necessárias; e</li><li>No final da página, clique em Atualizar perfil.</li></ol><p>Pronto! Seus dados foram atualizados.</p><p>Para outras dúvidas, consulte nossa área de <a href=\"https://aprendamais.mec.gov.br/mod/page/view.php?id=134111\" target=\"_blank\">Perguntas Frequentes</a>\n.</p><p>Atenciosamente,<br>(escreva seu nome)</p>"
             }
           ]
         },
@@ -525,13 +525,13 @@
           ]
         },
         {
-          "id": "não consegue emitir  falta confirmação de dados",
-          "titulo": "Falta confirmação de dados",
+          "id": "Não consegue emitir / falta confirmação de dados",
+          "titulo": "Não consegue emitir / falta confirmação de dados",
           "respostas": [
             {
               "rotulo": null,
-              "texto": "Caro(a) aluno(a), bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!Estamos aqui para lhe ajudar.Verificamos no sistema que você precisa realizar a Confirmação de dados para poder emitir seu certificado. Para isso, tudo que você precisa fazer é:Na página principal do curso desejado, role a tela para baixo até encontrar o link para a Confirmação de Dados.Clique em “Confirmação de dados para a geração do certificado”, leia e confirme as informações pedidas.Volte para a página inicial do curso, role a página novamente para baixo e clique em “Certificado Digital”.Clique em “Obter o Certificado”.Abrirá uma janela com o seu certificado. Recomendamos que você salve o certificado no seu computador, num pen drive, no armazenamento em nuvem ou até mesmo impresso.Se a dificuldade persistir, entre novamente em contato. Atenciosamente, (escreva seu nome)",
-              "texto_html": "<p>Caro(a) aluno(a), bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!</p><p>Estamos aqui para lhe ajudar.</p><p>Verificamos no sistema que você precisa realizar a <strong>Confirmação de dados</strong> para poder emitir seu certificado.</p><p>Para isso, tudo que você precisa fazer é:</p><ol><li>Na página principal do curso desejado, role a tela para baixo até encontrar o link para a Confirmação de Dados.</li><li>Clique em \"Confirmação de dados para a geração do certificado\", leia e confirme as informações pedidas.</li><li>Volte para a página inicial do curso, role a página novamente para baixo e clique em “Certificado Digital”.</li><li>Clique em “Obter o Certificado”.</li><li>Abrirá uma janela com o seu certificado. Recomendamos que você salve o certificado no seu computador, num pen drive, no armazenamento em nuvem ou até mesmo impresso.</li></ol><p>Se a dificuldade persistir, entre novamente em contato.</p><p>Atenciosamente,<br>(escreva seu nome)</p>"
+              "texto": "Caro(a) alu(a), bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!Estamos aqui para lhe ajudar.Verificamos no sistema que você precisa realizar a Confirmação de dados para poder emitir seu certificado.Para isso, tudo que você precisa fazer é:Na página principal do curso desejado, role a tela para baixo até encontrar o link para a Confirmação de Dados.Clique em \"Confirmação de dados para a geração do certificado\", leia e confirme as informações pedidas.Volte para a página inicial do curso, role a página novamente para baixo e clique em “Certificado Digital”.Clique em “Obter o Certificado”.Abrirá uma janela com o seu certificado. Recomendamos que você salve o certificado no seu computador, num pen drive, no armazenamento em nuvem ou até mesmo impresso.Se a dificuldade persistir, entre novamente em contato.Atenciosamente, (escreva seu nome)",
+              "texto_html": "<p>Caro(a) aluno(a), bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!</p><p>Estamos aqui para lhe ajudar.</p><p>Verificamos no sistema que você precisa realizar a <strong>Confirmação de dados</strong> para poder emitir seu certificado.</p><p>Para isso, tudo que você precisa fazer é:</p><ol><li>Na página principal do curso desejado, role a tela para baixo até encontrar o link para a Confirmação de Dados.</li><li>Clique em “Confirmação de dados para a geração do certificado\", leia e confirme as informações pedidas.</li><li>Volte para a página inicial do curso, role a página novamente para baixo e clique em “Certificado Digital”.</li><li>Clique em “Obter o Certificado”.</li><li>Abrirá uma janela com o seu certificado. Recomendamos que você salve o certificado no seu computador, num pen drive, no armazenamento em nuvem ou até mesmo impresso.</li></ol><p>Se a dificuldade persistir, entre novamente em contato.</p><p>Atenciosamente,<br> (escreva seu nome)</p>"
             }
           ]
         },
@@ -632,8 +632,8 @@
           "respostas": [
             {
               "rotulo": null,
-              "texto": "Caro(a) aluno(a), bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!\nO prazo mínimo para a emissão do certificado é o informado no início de cada curso no bloco lateral direito \"Dados Gerais do Curso\" no item \"Prazo mínimo para obtenção do certificado\".\nFique atento: você tem até o dia 31/01/2022 para gerar o certificado.\nAtenciosamente,\n(escreva seu nome)",
-              "texto_html": "<p>Caro(a) aluno(a), bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!</p><p>O prazo mínimo para a emissão do certificado é o informado no início de cada curso no bloco lateral direito &quot;Dados Gerais do Curso&quot; no item &quot;Prazo mínimo para obtenção do certificado&quot;.</p><p>Fique atento: você tem até o dia 31/01/2022 para gerar o certificado.</p><p>Atenciosamente,<br>(escreva seu nome)</p>"
+              "texto": "Caro(a) aluno(a), bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!O prazo mínimo para a emissão do certificado é o informado no início de cada curso no bloco lateral direito \"Dados Gerais do Curso\" no item \"Prazo mínimo para obtenção do certificado\".Fique atento: você tem até o dia [DATA ENCERRAMENTO] para gerar o certificado.Atenciosamente,(escreva seu nome)",
+              "texto_html": "<p>Caro(a) aluno(a), bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!</p><p>O prazo mínimo para a emissão do certificado é o informado no início de cada curso no bloco lateral direito &quot;Dados Gerais do Curso&quot; no item &quot;Prazo mínimo para obtenção do certificado&quot;.</p><p>Fique atento: você tem até o dia <strong>[DATA ENCERRAMENTO]</strong> para gerar o certificado.</p><p>Atenciosamente,<br>(escreva seu nome)</p>"
             },
             {
               "rotulo": null,
@@ -1360,8 +1360,8 @@
           "respostas": [
             {
               "rotulo": null,
-              "texto": "Caro(a) aluno(a), bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!Estamos aqui para lhe ajudar!Para obter o comprovante de inscrição, é necessário que você:Acesse a  Plataforma Aprenda Mais com seu login e senha;Acesse o curso no qual você está inscrito e procure a área “Informações Gerais do Curso”;Role a tela para baixo, abaixo do quadro cinza de boas-vindas você verá o item “Comprovante de Inscrição”;Clique em “Obter o Documento”.Pronto! Você já possui o comprovante de que está inscrito(a) em um curso da Plataforma Aprenda Mais.Atenciosamente,(escreva seu nome)",
-              "texto_html": "<p>Caro(a) aluno(a), bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!</p><p>Estamos aqui para lhe ajudar!</p><p>Para obter o comprovante de inscrição, é necessário que você:</p><ol><li>Acesse a  <a href=\"https://aprendamais.mec.gov.br\" target=\"_blank\">Plataforma Aprenda Mais</a> com seu login e senha;</li><li>Acesse o curso no qual você está inscrito e procure a área “Informações Gerais do Curso”;</li><li>Role a tela para baixo, abaixo do quadro cinza de boas-vindas você verá o item “Comprovante de Inscrição”;</li><li>Clique em “Obter o Documento”.</li></ol><p>Pronto! Você já possui o comprovante de que está inscrito(a) em um curso da Plataforma Aprenda Mais.</p><p>Atenciosamente,<br>(escreva seu nome)</p>"
+              "texto": "Caro(a) aluno(a), bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!Estamos aqui para lhe ajudar!Para obter o comprovante de inscrição, é necessário que você:Acesse a Plataforma Aprenda Mais com seu login e senha;Acesse o curso no qual você está inscrito e procure a área “Informações Gerais do Curso”;Role a tela para baixo, abaixo do quadro cinza de boas-vindas você verá o item “Comprovante de Inscrição”;Clique em “Obter o Documento”. Pronto! Você já possui o comprovante de que está inscrito(a) em um curso da Plataforma Aprenda Mais.Atenciosamente,(escreva seu nome)",
+              "texto_html": "<p>Caro(a) aluno(a), bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!</p><p>Estamos aqui para lhe ajudar!</p><p>Para obter o comprovante de inscrição, é necessário que você:</p><ol><li>Acesse a <a href=\"https://aprendamais.mec.gov.br\" target=\"_blank\">Plataforma Aprenda Mais</a> com seu login e senha;</li><li>Acesse o curso no qual você está inscrito e procure a área “Informações Gerais do Curso”;</li><li>Role a tela para baixo, abaixo do quadro cinza de boas-vindas você verá o item “Comprovante de Inscrição”;</li><li>Clique em “Obter o Documento”. Pronto! Você já possui o comprovante de que está inscrito(a) em um curso da Plataforma Aprenda Mais.</li></ol><p>Atenciosamente,<br>(escreva seu nome)</p>"
             },
             {
               "rotulo": "COMPROVANTE DE INSCRIÇÃO EMITIDO ERRADO",
@@ -1727,8 +1727,8 @@
           "respostas": [
             {
               "rotulo": null,
-              "texto": "Caro(a) aluno(a), bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!\nPara registrar sua solicitação, pedimos que utilize o Canal Oficial de Suporte da plataforma, disponível no link abaixo:\nhttps://aprendamais.mec.gov.br/mod/page/view.php?id=23349\nPor meio desse canal, sua demanda será encaminhada corretamente e tratada com maior assertividade.\nFicamos à disposição.\nAtenciosamente,\n(escreva seu nome)",
-              "texto_html": "<p>Caro(a) aluno(a), bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!</p><p>Para registrar sua solicitação, pedimos que utilize o <b>Canal Oficial de Suporte</b> da plataforma, disponível no link abaixo:</p><p>https://aprendamais.mec.gov.br/mod/page/view.php?id=23349</p><p>Por meio desse canal, sua demanda será encaminhada corretamente e tratada com maior assertividade.</p><p>Ficamos à disposição.</p><p>Atenciosamente,<br>(escreva seu nome)</p>"
+              "texto": "Caro(a) aluno(a), bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!Para registrar sua solicitação, pedimos que utilize o Canal Oficial de Suporte da plataforma, disponível no link abaixo:https://aprendamais.mec.gov.br/mod/page/view.php?id=134111Por meio desse canal, sua demanda será encaminhada corretamente e tratada com maior assertividade.Ficamos à disposição.Atenciosamente,(escreva seu nome)",
+              "texto_html": "<p>Caro(a) aluno(a), bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!</p><p>Para registrar sua solicitação, pedimos que utilize o <b>Canal Oficial de Suporte</b> da plataforma, disponível no link abaixo:</p><p><a href=\"https://aprendamais.mec.gov.br/mod/page/view.php?id=134111\" target=\"_blank\">https://aprendamais.mec.gov.br/mod/page/view.php?id=134111</a></p><p>Por meio desse canal, sua demanda será encaminhada corretamente e tratada com maior assertividade.</p><p>Ficamos à disposição.</p><p>Atenciosamente,<br>(escreva seu nome)</p>"
             }
           ]
         }

@@ -9,7 +9,7 @@
   --border: #e0ddd6;
   --shadow: 0 2px 8px rgba(26, 77, 110, 0.08);
   --radius: 8px;
-  --sidebar-w: 260px;
+  --sidebar-w: 180px;
   --gap: 1.5rem;
 }
 
@@ -96,7 +96,7 @@ body {
   color: var(--primary);
   background: transparent;
   border: none;
-  border-bottom: 1.5px solid var(--border);
+  border-bottom: 2px solid var(--border);
   border-radius: 0;
   cursor: pointer;
   transition: all 0.2s;
@@ -115,7 +115,7 @@ body {
 }
 
 .tema-header .seta {
-  font-size: 0.5rem;
+  font-size: 0.6rem;
   margin-left: 0.5rem;
   flex-shrink: 0;
   transition: transform 0.25s;

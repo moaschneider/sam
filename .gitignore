@@ -1,6 +1,6 @@
 .vscode
-geradores-respostas
 old
+backup
 
 codigos.txt
 dossie.txt
@@ -8,9 +8,7 @@ emails-cursistas.txt
 respostas_backup.json
 respostas_backup2.json
 
-# Ignora pasta .cursor
-.cursor/*
+# Ignora configurações pessoais do Cursor
+.cursor/
 
-# Mantém versionamento apenas das rules do projeto
-!.cursor/rules/
-!.cursor/rules/**
+geradores-respostas

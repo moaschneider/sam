@@ -57,6 +57,66 @@
               "texto_html": "<p>Caro(a) cursista, bem-vindo(a) à Plataforma Aprenda Mais!</p>\n<p>A Plataforma Aprenda Mais permite o cadastro apenas de usuários com mais de 12 anos de idade.</p>\n<p>Caso a idade tenha sido informada incorretamente no momento do cadastro, aguarde um período e tente realizar o cadastro novamente, informando a idade correta.</p>\n<p>Atenciosamente,<br>(nome do atendente)</p>"
             }
           ]
+        },
+        {
+          "id": 5,
+          "titulo": "Dúvida enviada direto por e-mail",
+          "respostas": [
+            {
+              "id": 51,
+              "rotulo": null,
+              "texto": "Caro(a) cursista, bem-vindo(a) à Plataforma Aprenda Mais! Agradecemos seu contato. Para que possamos dar o devido encaminhamento à sua solicitação, orientamos que registre sua dúvida diretamente pelo canal de Suporte (https://aprendamais.mec.gov.br/mod/page/view.php?id=134111), disponível na própria página da plataforma, selecionando a opção correspondente ao seu atendimento. Esse procedimento é importante para que possamos localizar suas informações e acompanhar a demanda com maior segurança e agilidade. Atenciosamente, (nome do atendente)",
+              "texto_html": "<p>Caro(a) cursista, bem-vindo(a) à Plataforma Aprenda Mais!</p>\n<p>Agradecemos seu contato.</p>\n<p>Para que possamos dar o devido encaminhamento à sua solicitação, orientamos que registre sua dúvida diretamente pelo canal de Suporte (https://aprendamais.mec.gov.br/mod/page/view.php?id=134111), disponível na própria página da plataforma, selecionando a opção correspondente ao seu atendimento.</p>\n<p>Esse procedimento é importante para que possamos localizar suas informações e acompanhar a demanda com maior segurança e agilidade.</p>\n<p>Atenciosamente,<br>(nome do atendente)</p>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "PERF",
+      "titulo": "Perfil do cursista",
+      "subtemas": [
+        {
+          "id": 1,
+          "titulo": "Alterar dados do perfil",
+          "respostas": [
+            {
+              "id": 11,
+              "rotulo": null,
+              "texto": "Caro(a) cursista, bem-vindo(a) à Plataforma Aprenda Mais! Para alterar seus dados, acesse a Plataforma Aprenda Mais com seu login e senha. Em seguida, clique no seu nome, no canto superior da tela, e selecione a opção de edição do perfil. Após realizar as alterações desejadas, lembre-se de salvar as informações para que os dados sejam atualizados corretamente. Atenciosamente, (nome do atendente)",
+              "texto_html": "<p>Caro(a) cursista, bem-vindo(a) à Plataforma Aprenda Mais!</p>\n<p>Para alterar seus dados, acesse a Plataforma Aprenda Mais com seu login e senha. Em seguida, clique no seu nome, no canto superior da tela, e selecione a opção de edição do perfil.</p>\n<p>Após realizar as alterações desejadas, lembre-se de salvar as informações para que os dados sejam atualizados corretamente.</p>\n<p>Atenciosamente,<br>(nome do atendente)</p>"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CERT",
+      "titulo": "Certificados - casos simples",
+      "subtemas": [
+        {
+          "id": 1,
+          "titulo": "Segunda via",
+          "respostas": [
+            {
+              "id": 11,
+              "rotulo": null,
+              "texto": "Caro(a) cursista, bem-vindo(a) ao Suporte da Plataforma Aprenda Mais! Para obter a 2ª via do certificado acesse a página inicial da plataforma com login e senha e localize a opção de 2ª via ou clique no link direto: https://aprendamais.mec.gov.br/blocks/simple_certificate/view.php?cid=1 Atenciosamente, (escreva seu nome)",
+              "texto_html": "<p>Caro(a) cursista, bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!</p>\n<p>Para obter a 2ª via do certificado acesse a página inicial da plataforma com login e senha e localize a opção de 2ª via ou clique no link direto: https://aprendamais.mec.gov.br/blocks/simple_certificate/view.php?cid=1</p>\n<p>Atenciosamente,<br>(escreva seu nome)</p>"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "titulo": "Onde é aceito o certificado?",
+          "respostas": [
+            {
+              "id": 21,
+              "rotulo": null,
+              "texto": "Caro(a) cursista, bem-vindo(a) ao Suporte da Plataforma Aprenda Mais! Sugerimos que você verifique nas instituições e/ou com os órgãos competentes que receberão os certificados, para identificar quais são os critérios/requisitos por eles estabelecidos e se os cursos são aceitos. Os cursos oferecidos pela Aprenda Mais são considerados de curta duração (entre 20 e 60 horas) e de formação continuada. São gratuitos (inclusive os certificados) e on-line. Atenciosamente, (escreva seu nome)",
+              "texto_html": "<p>Caro(a) cursista, bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!</p>\n<p>Sugerimos que você verifique nas instituições e/ou com os órgãos competentes que receberão os certificados, para identificar quais são os critérios/requisitos por eles estabelecidos e se os cursos são aceitos.</p>\n<p>Os cursos oferecidos pela Aprenda Mais são considerados de curta duração (entre 20 e 60 horas) e de formação continuada. São gratuitos (inclusive os certificados) e on-line.</p>\n<p>Atenciosamente,<br>(escreva seu nome)</p>"
+            }
+          ]
         }
       ]
     },
@@ -84,10 +144,28 @@
         },
         {
           "id": 2,
-          "titulo": "Pedido de alteração fora do canal oficial",
+          "titulo": "Conta não confirmada",
           "respostas": [
             {
               "id": 21,
+              "rotulo": "Resposta padrão",
+              "texto": "Caro(a) cursista, bem-vindo(a) à Plataforma Aprenda Mais! Verificamos no sistema que seu cadastro consta como não confirmado. Após a criação da conta, é necessário acessar o link de confirmação enviado automaticamente para o e-mail cadastrado. Para confirmar seu cadastro, tudo que você precisa fazer é: Abra o e-mail automático que você recebeu, informando que uma conta foi criada; Encontre na mensagem o endereço indicado para confirmar. ATENÇÃO: ele pode estar na cor azul com o link ou, dependendo do seu e-mail, apenas como texto; Clique no link ou copie e cole na barra de endereços do seu navegador; Siga as orientações solicitadas. Pronto! Sua conta está confirmada. Pedimos que verifique sua caixa de entrada e também a caixa de spam. Caso o prazo de confirmação tenha expirado, será necessário realizar um novo cadastro na plataforma. Atenciosamente, (nome do atendente)",
+              "texto_html": "<p>Caro(a) cursista, bem-vindo(a) à Plataforma Aprenda Mais!</p>\n<p>Verificamos no sistema que seu cadastro consta como não confirmado. Após a criação da conta, é necessário acessar o link de confirmação enviado automaticamente para o e-mail cadastrado.</p>\n<p>Para confirmar seu cadastro, tudo que você precisa fazer é:</p>\n<ol>\n<li>Abra o e-mail automático que você recebeu, informando que uma conta foi criada;</li>\n<li>Encontre na mensagem o endereço indicado para confirmar. ATENÇÃO: ele pode estar na cor azul com o link ou, dependendo do seu e-mail, apenas como texto;</li>\n<li>Clique no link ou copie e cole na barra de endereços do seu navegador;</li>\n<li>Siga as orientações solicitadas.</li>\n</ol>\n<p>Pronto! Sua conta está confirmada.</p>\n<p>Pedimos que verifique sua caixa de entrada e também a caixa de spam. Caso o prazo de confirmação tenha expirado, será necessário realizar um novo cadastro na plataforma.</p>\n<p>Atenciosamente,<br>(nome do atendente)</p>"
+            },
+            {
+              "id": 22,
+              "rotulo": "Reenvio da mensagem de confirmação",
+              "texto": "Caro(a) cursista, bem-vindo(a) ao Suporte da Plataforma Aprenda Mais! Reenviamos o e-mail para você confirmar seu cadastro. Verifique também sua caixa de spam. Se a dificuldade continuar, entre novamente em contato. Atenciosamente, (escreva seu nome)",
+              "texto_html": "<p>Caro(a) cursista, bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!</p>\n<p>Reenviamos o e-mail para você confirmar seu cadastro. Verifique também sua caixa de spam.</p>\n<p>Se a dificuldade continuar, entre novamente em contato.</p>\n<p>Atenciosamente,<br>(escreva seu nome)</p>"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "titulo": "Pedido de alteração fora do canal oficial",
+          "respostas": [
+            {
+              "id": 31,
               "rotulo": null,
               "texto": "Caro(a) aluno(a), bem-vindo(a) ao Suporte da Plataforma Aprenda Mais! A solicitação de alteração de e-mail deve ser enviada pelo suporte no menu Acesso: Atualizar e-mail cadastrado na plataforma . Atenciosamente, (escreva seu nome)",
               "texto_html": "<p>Caro(a) aluno(a), bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!</p>\n<p>A solicitação de alteração de e-mail deve ser enviada pelo suporte no menu <a href=\"https://aprendamais.mec.gov.br/mod/page/view.php?id=134111\" target=\"_blank\">Acesso: Atualizar e-mail cadastrado na plataforma</a>.</p>\n<p>Atenciosamente,<br> (escreva seu nome)</p>"
@@ -95,11 +173,11 @@
           ]
         },
         {
-          "id": 3,
+          "id": 4,
           "titulo": "Documentação OK",
           "respostas": [
             {
-              "id": 31,
+              "id": 41,
               "rotulo": "Após proceder com a alteração",
               "texto": "Caro(a) cursista, bem-vindo(a) à Plataforma Aprenda Mais! Seu endereço de e-mail foi atualizado. Se você esqueceu sua senha, tudo o que precisa fazer é: Acesse a Plataforma Aprenda Mais ; No alto da página inicial clique no item \"Acessar\" no canto superior direito; Na página seguinte, clique em “Perdeu a Senha?” e preencha as informações solicitadas. Atenção: preencha somente seu usuário OU seu e-mail ; Você receberá um e-mail com as orientações para criar uma nova senha. Se a dificuldade continuar, entre novamente em contato. Atenciosamente, (nome do atendente)",
               "texto_html": "<p>Caro(a) cursista, bem-vindo(a) à Plataforma Aprenda Mais!</p>\n<p>Seu endereço de e-mail foi atualizado. Se você esqueceu sua senha, tudo o que precisa fazer é:</p>\n<ol>\n<li>Acesse a <a href=\"https://aprendamais.mec.gov.br\" target=\"_blank\">Plataforma Aprenda Mais</a>;</li>\n<li>No alto da página inicial clique no item \"Acessar\" no canto superior direito;</li>\n<li>Na página seguinte, clique em “Perdeu a Senha?” e preencha as informações solicitadas. <strong>Atenção: preencha somente seu usuário OU seu e-mail</strong>;</li>\n<li>Você receberá um e-mail com as orientações para criar uma nova senha.</li>\n</ol>\n<p>Se a dificuldade continuar, entre novamente em contato.</p>\n<p>Atenciosamente,<br> (nome do atendente)</p>"
@@ -107,11 +185,11 @@
           ]
         },
         {
-          "id": 4,
+          "id": 5,
           "titulo": "Conta duplicada",
           "respostas": [
             {
-              "id": 41,
+              "id": 51,
               "rotulo": "Certificado emitido em uma conta → manter essa conta • Certificado emitido nas duas contas → REPORTAR",
               "texto": "Caro(a) cursista, bem-vindo(a) à Plataforma Aprenda Mais! Identificamos no sistema que existem duas contas vinculadas ao seu CPF, criadas em momentos diferentes. A Plataforma Aprenda Mais permite apenas uma conta por CPF. Para darmos continuidade ao atendimento, pedimos o envio de um documento de identificação com CPF, para confirmação da titularidade, e a indicação do e-mail que deseja manter ativo. Atenciosamente, (nome do atendente)",
               "texto_html": "<p>Caro(a) cursista, bem-vindo(a) à Plataforma Aprenda Mais!</p>\n<p>Identificamos no sistema que existem duas contas vinculadas ao seu CPF, criadas em momentos diferentes.</p>\n<p>A Plataforma Aprenda Mais permite apenas uma conta por CPF.</p>\n<p>Para darmos continuidade ao atendimento, pedimos o envio de um documento de identificação com CPF, para confirmação da titularidade, e a indicação do e-mail que deseja manter ativo.</p>\n<p>Atenciosamente,<br>(nome do atendente)</p>"
@@ -119,41 +197,41 @@
           ]
         },
         {
-          "id": 5,
+          "id": 6,
           "titulo": "E-mail enviado é diferente do cadastrado",
           "respostas": [
             {
-              "id": 51,
+              "id": 61,
               "rotulo": "Acessou a conta após pedido de atendimentos → ele mesmo pode fazer a alteração",
               "texto": "Caro(a) cursista, bem-vindo(a) à Plataforma Aprenda Mais! A alteração de endereço de e-mail pode ser feita pelo próprio cursista, após a conta estar confirmada. Tudo que precisa fazer para corrigir é: Acesse a Plataforma Aprenda Mais com seu login e senha; Clique no seu nome no canto superior direito; Clique em Perfil e localize: Modificar perfil, faça as correções necessárias; e No final da página, clique em Atualizar perfil. Pronto! Seus dados foram atualizados. Atenciosamente, (nome do atendente)",
               "texto_html": "<p>Caro(a) cursista, bem-vindo(a) à Plataforma Aprenda Mais!</p>\n<p>A alteração de endereço de e-mail pode ser feita pelo próprio cursista, após a conta estar confirmada.</p>\n<p>Tudo que precisa fazer para corrigir é:</p>\n<ol>\n<li>Acesse a Plataforma Aprenda Mais com seu login e senha;</li>\n<li>Clique no seu nome no canto superior direito;</li>\n<li>Clique em Perfil e localize: Modificar perfil, faça as correções necessárias; e</li>\n<li>No final da página, clique em Atualizar perfil.</li>\n</ol>\n<p>Pronto! Seus dados foram atualizados.</p>\n<p>Atenciosamente,<br>(nome do atendente)</p>"
             },
             {
-              "id": 52,
+              "id": 62,
               "rotulo": "Não enviou documentos",
               "texto": "Caro(a) cursista, bem-vindo(a) à Plataforma Aprenda Mais! Para realizar a alteração do e-mail cadastrado, precisamos confirmar a titularidade da conta. Pedimos, por gentileza, que nos envie a cópia de um documento de identificação com nome completo e CPF . Após a conferência das informações, faremos a atualização do cadastro no sistema. Atenciosamente, (nome do atendente)",
               "texto_html": "<p>Caro(a) cursista, bem-vindo(a) à Plataforma Aprenda Mais!</p>\n<p>Para realizar a alteração do e-mail cadastrado, precisamos confirmar a titularidade da conta.</p>\n<p>Pedimos, por gentileza, que nos envie a cópia de um documento de identificação com <strong>nome completo e CPF</strong>.</p>\n<p>Após a conferência das informações, faremos a atualização do cadastro no sistema.</p>\n<p>Atenciosamente,<br> (nome do atendente)</p>"
             },
             {
-              "id": 53,
+              "id": 63,
               "rotulo": "Documento insuficiente ou inválido",
               "texto": "Caro(a) cursista, bem-vindo(a) à Plataforma Aprenda Mais! Recebemos o documento enviado, porém ele não atende aos critérios necessários para confirmação da titularidade da conta. Para dar continuidade ao atendimento, pedimos que envie um documento de identificação válido, que contenha nome completo e CPF legíveis , como CIN ou CNH. Assim que recebermos o documento correto, poderemos prosseguir com a análise e a atualização solicitada. Atenciosamente, (nome do atendente)",
               "texto_html": "<p>Caro(a) cursista, bem-vindo(a) à Plataforma Aprenda Mais!</p>\n<p>Recebemos o documento enviado, porém ele não atende aos critérios necessários para confirmação da titularidade da conta.</p>\n<p>Para dar continuidade ao atendimento, pedimos que envie um documento de identificação válido, que contenha <strong>nome completo e CPF legíveis</strong>, como CIN ou CNH.</p>\n<p>Assim que recebermos o documento correto, poderemos prosseguir com a análise e a atualização solicitada.</p>\n<p>Atenciosamente,<br>(nome do atendente)</p>"
             },
             {
-              "id": 54,
+              "id": 64,
               "rotulo": "Não sabe como enviar documentos",
               "texto": "Caro(a) cursista, bem-vindo(a) ao Suporte da Plataforma Aprenda Mais! A cópia do documento pode ser enviada como anexo em resposta a este e-mail. Utilize uma foto legível (frente e verso) de um documento de identificação válido, como RG ou CNH, com nome completo e CPF visíveis . Nos informe também para qual e-mail deseja alterar seu cadastro. Atenciosamente, (nome do atendente)",
               "texto_html": "<p>Caro(a) cursista, bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!</p>\n<p>A cópia do documento pode ser enviada como anexo em resposta a este e-mail. Utilize uma foto legível (frente e verso) de um documento de identificação válido, como RG ou CNH, com <strong>nome completo e CPF visíveis</strong>. Nos informe também para qual e-mail deseja alterar seu cadastro.</p>\n<p>Atenciosamente,<br>(nome do atendente)</p>"
             },
             {
-              "id": 55,
+              "id": 65,
               "rotulo": "Documento válido mas não indicou e nem há indicação do e-mail a ser inserido",
               "texto": "Caro(a) cursista, bem-vindo(a) ao Suporte da Plataforma Aprenda Mais! Agradecemos o envio do seu documento de identificação. Para darmos continuidade ao atendimento, precisamos que você nos informe para qual e-mail deseja alterar seu cadastro . Atenciosamente, (nome do atendente)",
               "texto_html": "<p>Caro(a) cursista, bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!</p>\n<p>Agradecemos o envio do seu documento de identificação.</p>\n<p>Para darmos continuidade ao atendimento, precisamos que você nos informe para <strong>qual e-mail deseja alterar seu cadastro</strong>.</p>\n<p>Atenciosamente,<br>(nome do atendente)</p>"
             },
             {
-              "id": 56,
+              "id": 66,
               "rotulo": "E-mail informado já está sendo usado por outra conta",
               "texto": "Caro(a) aluno(a), bem-vindo(a) ao Suporte da Plataforma Aprenda Mais! Recebemos sua solicitação de alteração, porém o nosso sistema identificou que já existe uma conta que utiliza o novo endereço de e-mail que você informou. As contas de usuário na Plataforma Aprenda Mais devem possuir CPF e endereços de e-mail individuais. Não é possível compartilhar o mesmo endereço de e-mail. Pedimos, por gentileza, que informe um e-mail que ainda não é utilizado por outro usuário. Atenciosamente, (escreva seu nome)",
               "texto_html": "<p>Caro(a) aluno(a), bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!</p>\n<p>Recebemos sua solicitação de alteração, porém o nosso sistema identificou que já existe uma conta que utiliza o novo endereço de e-mail que você informou.</p>\n<p>As contas de usuário na Plataforma Aprenda Mais devem possuir CPF e endereços de e-mail individuais. Não é possível compartilhar o mesmo endereço de e-mail.</p>\n<p>Pedimos, por gentileza, que informe um e-mail que ainda não é utilizado por outro usuário.</p>\n<p>Atenciosamente,<br>(escreva seu nome)</p>"
@@ -168,19 +246,43 @@
       "subtemas": [
         {
           "id": 1,
-          "titulo": "Sem certificado",
+          "titulo": "Com certificado",
           "respostas": [
             {
               "id": 11,
+              "rotulo": null,
+              "texto": "Caro(a) cursista, bem-vindo(a) à Plataforma Aprenda Mais! Para verificar a possibilidade de exclusão da sua conta, analisamos sua situação no sistema. Informamos que a exclusão da conta não é possível quando já existem cursos concluídos ou certificados emitidos, pois esses registros ficam vinculados ao cadastro. Atenciosamente, (nome do atendente)",
+              "texto_html": "<p>Caro(a) cursista, bem-vindo(a) à Plataforma Aprenda Mais!</p>\n<p>Para verificar a possibilidade de exclusão da sua conta, analisamos sua situação no sistema.</p>\n<p>Informamos que a exclusão da conta não é possível quando já existem cursos concluídos ou certificados emitidos, pois esses registros ficam vinculados ao cadastro.</p>\n<p>Atenciosamente,<br>(nome do atendente)</p>"
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "titulo": "Sem certificado",
+          "respostas": [
+            {
+              "id": 21,
               "rotulo": "Após proceder com a exclusão",
               "texto": "Caro(a) cursista, bem-vindo(a) ao Suporte da Plataforma Aprenda Mais! Conforme solicitado, seu cadastro foi excluído com êxito. Atenciosamente, (escreva seu nome)",
               "texto_html": "<p>Caro(a) cursista, bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!</p>\n<p>Conforme solicitado, seu cadastro foi excluído com êxito.</p>\n<p>Atenciosamente,<br> (escreva seu nome)</p>"
             },
             {
-              "id": 12,
+              "id": 22,
               "rotulo": "Não enviou documentos de identificação",
               "texto": "Caro(a) cursista, bem-vindo(a) ao Suporte da Plataforma Aprenda Mais! Com o objetivo de garantir a segurança de nossos(as) usuários(as), para fazermos a exclusão da conta, solicitamos o envio da cópia digital (frente e verso) de um documento de identificação com nome completo e CPF , confirmando que você é o(a) titular da mesma. Atenciosamente, (escreva seu nome)",
               "texto_html": "<p>Caro(a) cursista, bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!</p>\n<p>Com o objetivo de garantir a segurança de nossos(as) usuários(as), para fazermos a exclusão da conta, solicitamos o envio da cópia digital (frente e verso) de um documento de identificação com <strong>nome completo e CPF</strong>, confirmando que você é o(a) titular da mesma.</p>\n<p>Atenciosamente,<br> (escreva seu nome)</p>"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "titulo": "Documento insuficiente ou inválido",
+          "respostas": [
+            {
+              "id": 31,
+              "rotulo": null,
+              "texto": "Caro(a) cursista, bem-vindo(a) ao Suporte da Plataforma Aprenda Mais! Com o objetivo de garantir a segurança de nossos(as) usuários(as), para fazermos a exclusão da conta, solicitamos o envio da cópia digital (frente e verso) de um documento de identificação com nome completo e CPF, confirmando que você é o(a) titular da mesma. Atenciosamente, (escreva seu nome)",
+              "texto_html": "<p>Caro(a) cursista, bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!</p>\n<p>Com o objetivo de garantir a segurança de nossos(as) usuários(as), para fazermos a exclusão da conta, solicitamos o envio da cópia digital (frente e verso) de um documento de identificação com nome completo e CPF, confirmando que você é o(a) titular da mesma.</p>\n<p>Atenciosamente,<br>(escreva seu nome)</p>"
             }
           ]
         }

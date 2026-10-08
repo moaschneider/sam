@@ -83,8 +83,69 @@
 ```
 
 
+## Dúvida enviada direto por e-mail
+
+#### HTML
+
+```html
+<p>Caro(a) cursista, bem-vindo(a) à Plataforma Aprenda Mais!</p>
+
+<p>Agradecemos seu contato.</p>
+
+<p>Para que possamos dar o devido encaminhamento à sua solicitação, orientamos que registre sua dúvida diretamente pelo canal de Suporte (https://aprendamais.mec.gov.br/mod/page/view.php?id=134111), disponível na própria página da plataforma, selecionando a opção correspondente ao seu atendimento.</p>
+
+<p>Esse procedimento é importante para que possamos localizar suas informações e acompanhar a demanda com maior segurança e agilidade.</p>
+
+<p>Atenciosamente,<br>(nome do atendente)</p>
+```
 
 
+
+# Perfil do cursista
+
+## Alterar dados do perfil
+
+#### HTML
+
+```html
+<p>Caro(a) cursista, bem-vindo(a) à Plataforma Aprenda Mais!</p>
+
+<p>Para alterar seus dados, acesse a Plataforma Aprenda Mais com seu login e senha. Em seguida, clique no seu nome, no canto superior da tela, e selecione a opção de edição do perfil.</p>
+
+<p>Após realizar as alterações desejadas, lembre-se de salvar as informações para que os dados sejam atualizados corretamente.</p>
+
+<p>Atenciosamente,<br>(nome do atendente)</p>
+```
+
+
+
+# Certificados - casos simples
+
+## Segunda via
+
+#### HTML
+
+```html
+<p>Caro(a) cursista, bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!</p>
+
+<p>Para obter a 2ª via do certificado acesse a página inicial da plataforma com login e senha e localize a opção de 2ª via ou clique no link direto: https://aprendamais.mec.gov.br/blocks/simple_certificate/view.php?cid=1</p>
+
+<p>Atenciosamente,<br>(escreva seu nome)</p>
+```
+
+## Onde é aceito o certificado?
+
+#### HTML
+
+```html
+<p>Caro(a) cursista, bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!</p>
+
+<p>Sugerimos que você verifique nas instituições e/ou com os órgãos competentes que receberão os certificados, para identificar quais são os critérios/requisitos por eles estabelecidos e se os cursos são aceitos.</p>
+
+<p>Os cursos oferecidos pela Aprenda Mais são considerados de curta duração (entre 20 e 60 horas) e de formação continuada. São gratuitos (inclusive os certificados) e on-line.</p>
+
+<p>Atenciosamente,<br>(escreva seu nome)</p>
+```
 
 
 
@@ -123,6 +184,49 @@
 
 <p>Atenciosamente,<br>(nome do atendente)</p>
 ```
+
+
+## Conta não confirmada
+
+### Resposta padrão
+
+#### HTML
+
+```html
+<p>Caro(a) cursista, bem-vindo(a) à Plataforma Aprenda Mais!</p>
+
+<p>Verificamos no sistema que seu cadastro consta como não confirmado. Após a criação da conta, é necessário acessar o link de confirmação enviado automaticamente para o e-mail cadastrado.</p>
+
+<p>Para confirmar seu cadastro, tudo que você precisa fazer é:</p>
+
+<ol>
+	<li>Abra o e-mail automático que você recebeu, informando que uma conta foi criada;</li>
+	<li>Encontre na mensagem o endereço indicado para confirmar. ATENÇÃO: ele pode estar na cor azul com o link ou, dependendo do seu e-mail, apenas como texto;</li>
+	<li>Clique no link ou copie e cole na barra de endereços do seu navegador;</li>
+	<li>Siga as orientações solicitadas.</li>
+</ol>
+
+<p>Pronto! Sua conta está confirmada.</p>
+
+<p>Pedimos que verifique sua caixa de entrada e também a caixa de spam. Caso o prazo de confirmação tenha expirado, será necessário realizar um novo cadastro na plataforma.</p>
+
+<p>Atenciosamente,<br>(nome do atendente)</p>
+```
+
+### Reenvio da mensagem de confirmação
+
+#### HTML
+
+```html
+<p>Caro(a) cursista, bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!</p>
+
+<p>Reenviamos o e-mail para você confirmar seu cadastro. Verifique também sua caixa de spam.</p>
+
+<p>Se a dificuldade continuar, entre novamente em contato.</p>
+
+<p>Atenciosamente,<br>(escreva seu nome)</p>
+```
+
 
 
 ## Pedido de alteração fora do canal oficial
@@ -305,6 +409,20 @@
 
 # EXCLUIR
 
+## Com certificado
+
+#### HTML
+
+```html
+<p>Caro(a) cursista, bem-vindo(a) à Plataforma Aprenda Mais!</p>
+
+<p>Para verificar a possibilidade de exclusão da sua conta, analisamos sua situação no sistema.</p>
+
+<p>Informamos que a exclusão da conta não é possível quando já existem cursos concluídos ou certificados emitidos, pois esses registros ficam vinculados ao cadastro.</p>
+
+<p>Atenciosamente,<br>(nome do atendente)</p>
+```
+
 ## Sem certificado
 
 ### Após proceder com a exclusão
@@ -329,6 +447,18 @@
 <p>Com o objetivo de garantir a segurança de nossos(as) usuários(as), para fazermos a exclusão da conta, solicitamos o envio da cópia digital (frente e verso) de um documento de identificação com <strong>nome completo e CPF</strong>, confirmando que você é o(a) titular da mesma.</p>
 
 <p>Atenciosamente,<br> (escreva seu nome)</p>
+```
+
+## Documento insuficiente ou inválido
+
+#### HTML
+
+```html
+<p>Caro(a) cursista, bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!</p>
+
+<p>Com o objetivo de garantir a segurança de nossos(as) usuários(as), para fazermos a exclusão da conta, solicitamos o envio da cópia digital (frente e verso) de um documento de identificação com nome completo e CPF, confirmando que você é o(a) titular da mesma.</p>
+
+<p>Atenciosamente,<br>(escreva seu nome)</p>
 ```
 
 

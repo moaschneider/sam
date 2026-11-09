@@ -11,6 +11,7 @@
 
   var STORAGE_KEY_ASSINATURA = 'atendimento-aprendamais-nome';
   var STORAGE_KEY_EDITS = 'atendimento-aprendamais-edits';
+  var STORAGE_KEY_ATENDIMENTOS = 'atendimento-aprendamais-lista-diaria';
 
   var dados = { temas: [] };
   var temaAtual = null;
@@ -28,6 +29,16 @@
   var emailCursista = '';
   var cursoCursista = '';
   var turmaCursista = '';
+  var atendimentos = [];
+
+  var btnAtendimentos = document.getElementById('btn-atendimentos');
+  var painelAtendimentos = document.getElementById('painel-atendimentos');
+  var totalAtendimentosEl = document.getElementById('total-atendimentos');
+  var listaAtendimentosEl = document.getElementById('lista-atendimentos');
+  var dataAtendimentosEl = document.getElementById('data-atendimentos');
+  var btnCopiarAtendimentos = document.getElementById('btn-copiar-atendimentos');
+  var btnLimparAtendimentos = document.getElementById('btn-limpar-atendimentos');
+  var statusAtendimentosEl = document.getElementById('status-atendimentos');
 
   /* ── Sidebar mobile toggle ── */
 
@@ -211,6 +222,166 @@
       .trim();
   }
 
+  /* ── Lista diária de atendimentos ── */
+
+  function preencherDoisDigitos(valor) {
+    return String(valor).padStart(2, '0');
+  }
+
+  function obterDataLocalISO(data) {
+    data = data || new Date();
+    return data.getFullYear() + '-' +
+      preencherDoisDigitos(data.getMonth() + 1) + '-' +
+      preencherDoisDigitos(data.getDate());
+  }
+
+  function carregarAtendimentos() {
+    try {
+      var salvos = JSON.parse(localStorage.getItem(STORAGE_KEY_ATENDIMENTOS) || '[]');
+      if (!Array.isArray(salvos)) return [];
+      return salvos.filter(function (item) {
+        return item && typeof item === 'object' &&
+          typeof item.dia === 'string' && typeof item.horario === 'string' &&
+          typeof item.nomeCursista === 'string' && typeof item.tema === 'string' &&
+          typeof item.subtema === 'string' && typeof item.caso === 'string';
+      });
+    } catch (e) {
+      return [];
+    }
+  }
+
+  function salvarAtendimentos() {
+    try { localStorage.setItem(STORAGE_KEY_ATENDIMENTOS, JSON.stringify(atendimentos)); }
+    catch (e) { /* A lista continua disponível durante esta sessão. */ }
+  }
+
+  function atualizarAtendimentosDoDia() {
+    var hoje = obterDataLocalISO();
+    atendimentos = atendimentos.filter(function (item) { return item.dia === hoje; });
+    salvarAtendimentos();
+    renderizarAtendimentos();
+  }
+
+  function formatarDataAtendimentos(dataISO) {
+    var partes = dataISO.split('-');
+    return partes[2] + '/' + partes[1] + '/' + partes[0];
+  }
+
+  function renderizarAtendimentos() {
+    if (!listaAtendimentosEl) return;
+    var hoje = obterDataLocalISO();
+    var doDia = atendimentos.filter(function (item) { return item.dia === hoje; });
+    var total = doDia.length;
+
+    totalAtendimentosEl.textContent = String(total);
+    btnAtendimentos.textContent = 'Atendimentos de hoje (' + total + ')';
+    dataAtendimentosEl.textContent = formatarDataAtendimentos(hoje);
+    listaAtendimentosEl.innerHTML = '';
+
+    if (total === 0) {
+      var vazio = document.createElement('li');
+      vazio.className = 'atendimento-vazio';
+      vazio.textContent = 'Nenhum atendimento registrado hoje.';
+      listaAtendimentosEl.appendChild(vazio);
+      return;
+    }
+
+    doDia.slice().sort(function (a, b) {
+      return a.horario.localeCompare(b.horario);
+    }).forEach(function (item) {
+      var linha = document.createElement('li');
+      linha.className = 'atendimento-item';
+      linha.textContent = item.horario + ' — ' + item.nomeCursista + ' — ' +
+        item.tema + ' > ' + item.subtema + ' > ' + item.caso;
+      listaAtendimentosEl.appendChild(linha);
+    });
+  }
+
+  function registrarAtendimento(snapshot) {
+    atualizarAtendimentosDoDia();
+    var agora = new Date();
+    var cpfAtual = (snapshot.cpf || '').replace(/\D/g, '');
+    var ultimoAtendimento = atendimentos[atendimentos.length - 1];
+    if (cpfAtual && ultimoAtendimento && ultimoAtendimento.cpf === cpfAtual) {
+      atendimentos.splice(atendimentos.length - 1, 1);
+    }
+
+    atendimentos.push({
+      id: agora.getTime().toString(36) + Math.random().toString(36).slice(2),
+      dia: obterDataLocalISO(agora),
+      horario: preencherDoisDigitos(agora.getHours()) + ':' +
+        preencherDoisDigitos(agora.getMinutes()) + ':' +
+        preencherDoisDigitos(agora.getSeconds()),
+      cpf: cpfAtual,
+      nomeCursista: snapshot.nomeCursista || 'Não informado',
+      tema: snapshot.tema || 'Tema não informado',
+      subtema: snapshot.subtema || 'Subtema não informado',
+      caso: snapshot.caso || ''
+    });
+    salvarAtendimentos();
+    renderizarAtendimentos();
+  }
+
+  function mostrarStatusAtendimentos(mensagem, erro) {
+    statusAtendimentosEl.textContent = mensagem;
+    statusAtendimentosEl.classList.toggle('status-erro', !!erro);
+  }
+
+  function copiarListaAtendimentos() {
+    atualizarAtendimentosDoDia();
+    var hoje = obterDataLocalISO();
+    var doDia = atendimentos.filter(function (item) { return item.dia === hoje; });
+    var linhas = ['Atendimentos de ' + formatarDataAtendimentos(hoje) + ' (' + doDia.length + ')'];
+    doDia.slice().sort(function (a, b) {
+      return a.horario.localeCompare(b.horario);
+    }).forEach(function (item) {
+      linhas.push(item.horario + ' — ' + item.nomeCursista + ' — ' +
+        item.tema + ' > ' + item.subtema + ' > ' + item.caso);
+    });
+
+    if (!navigator.clipboard || !navigator.clipboard.writeText) {
+      mostrarStatusAtendimentos('Não foi possível acessar a área de transferência.', true);
+      return;
+    }
+    navigator.clipboard.writeText(linhas.join('\n')).then(function () {
+      mostrarStatusAtendimentos('Lista copiada.');
+    }).catch(function () {
+      mostrarStatusAtendimentos('Falha ao copiar a lista.', true);
+    });
+  }
+
+  function limparAtendimentosDoDia() {
+    if (!confirm('Limpar os atendimentos registrados hoje?')) return;
+    atualizarAtendimentosDoDia();
+    atendimentos = [];
+    salvarAtendimentos();
+    renderizarAtendimentos();
+    mostrarStatusAtendimentos('Lista do dia limpa.');
+  }
+
+  function mostrarApp() {
+    painelAtendimentos.classList.add('oculto');
+    app.classList.remove('oculto');
+    btnAtendimentos.setAttribute('aria-expanded', 'false');
+  }
+
+  atendimentos = carregarAtendimentos();
+  atualizarAtendimentosDoDia();
+
+  btnAtendimentos.addEventListener('click', function () {
+    var vaiAbrir = painelAtendimentos.classList.contains('oculto');
+    painelAtendimentos.classList.toggle('oculto', !vaiAbrir);
+    app.classList.toggle('oculto', vaiAbrir);
+    btnAtendimentos.setAttribute('aria-expanded', String(vaiAbrir));
+    if (vaiAbrir) {
+      atualizarAtendimentosDoDia();
+      painelAtendimentos.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+
+  btnCopiarAtendimentos.addEventListener('click', copiarListaAtendimentos);
+  btnLimparAtendimentos.addEventListener('click', limparAtendimentosDoDia);
+
   /* ── Erro ── */
 
   function mostrarErro() {
@@ -314,6 +485,7 @@
         btn.className = 'subtema-btn';
         btn.textContent = sub.titulo;
         btn.addEventListener('click', function () {
+          mostrarApp();
           selecionarSubtema(ti, si, tema, sub);
           navTemas.querySelectorAll('.subtema-btn').forEach(function (b) {
             b.classList.remove('ativo');
@@ -325,6 +497,7 @@
       });
 
       header.addEventListener('click', function () {
+        mostrarApp();
         var jaAberto = subList.classList.contains('aberto');
 
         navTemas.querySelectorAll('.tema-header').forEach(function (h) {
@@ -411,7 +584,16 @@
       btnCopiar.addEventListener('click', function () {
         var txt = this.dataset.texto;
         var htm = this.dataset.textoHtml;
+        var registro = {
+          cpf: cpfCursista,
+          nomeCursista: nomeCursista,
+          tema: temaAtual ? temaAtual.titulo : '',
+          subtema: subtemaAtual ? subtemaAtual.titulo : '',
+          caso: r.rotulo ? r.rotulo.replace(/\*\*/g, '').trim() : ''
+        };
         function mostrarCopiado() {
+          registrarAtendimento(registro);
+          mostrarStatusAtendimentos('Atendimento registrado após a cópia.');
           btnCopiar.textContent = 'Copiado!';
           btnCopiar.classList.add('copied');
           setTimeout(function () {
@@ -419,16 +601,25 @@
             btnCopiar.classList.remove('copied');
           }, 2000);
         }
-        if (htm && navigator.clipboard && navigator.clipboard.write) {
+        function mostrarFalhaCopia() {
+          btnCopiar.textContent = 'Falha ao copiar';
+          setTimeout(function () { btnCopiar.textContent = 'Copiar'; }, 2000);
+        }
+        function copiarTextoSimples() {
+          if (!navigator.clipboard || !navigator.clipboard.writeText) {
+            mostrarFalhaCopia();
+            return;
+          }
+          navigator.clipboard.writeText(txt).then(mostrarCopiado).catch(mostrarFalhaCopia);
+        }
+        if (htm && navigator.clipboard && navigator.clipboard.write && typeof ClipboardItem !== 'undefined') {
           var bPlain = new Blob([txt], { type: 'text/plain' });
           var bHtml = new Blob([htm], { type: 'text/html' });
           navigator.clipboard.write([
             new ClipboardItem({ 'text/plain': bPlain, 'text/html': bHtml })
-          ]).then(mostrarCopiado).catch(function () {
-            navigator.clipboard.writeText(txt).then(mostrarCopiado);
-          });
+          ]).then(mostrarCopiado).catch(copiarTextoSimples);
         } else {
-          navigator.clipboard.writeText(txt).then(mostrarCopiado);
+          copiarTextoSimples();
         }
       });
       acoes.appendChild(btnCopiar);

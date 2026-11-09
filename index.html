@@ -22,15 +22,30 @@
         <nav id="nav-temas" class="nav-temas"></nav>
         <div class="sidebar-footer">
           <input type="text" id="input-assinatura" placeholder="Assinatura" autocomplete="name" />
+          <button type="button" class="atendimentos-link" id="btn-atendimentos" aria-expanded="false" aria-controls="painel-atendimentos">Atendimentos de hoje (0)</button>
         </div>
       </aside>
 
       <main class="main-content" id="main-content">
+        <section class="atendimentos-painel oculto" id="painel-atendimentos" aria-labelledby="titulo-atendimentos">
+          <div class="atendimentos-cabecalho">
+            <div>
+              <h2 id="titulo-atendimentos">Atendimentos de hoje</h2>
+              <p class="atendimentos-data">Data: <span id="data-atendimentos"></span> · Total: <strong id="total-atendimentos">0</strong></p>
+            </div>
+            <div class="atendimentos-acoes">
+              <button type="button" class="btn btn-copiar-atendimentos" id="btn-copiar-atendimentos">Copiar lista</button>
+              <button type="button" class="btn btn-limpar-atendimentos" id="btn-limpar-atendimentos">Limpar dia</button>
+            </div>
+          </div>
+          <ol class="lista-atendimentos" id="lista-atendimentos" aria-live="polite"></ol>
+          <p class="status-atendimentos" id="status-atendimentos" role="status" aria-live="polite"></p>
+        </section>
+
+
         <div id="erro-box" class="erro-carregamento oculto">
           <p><strong>Não foi possível carregar os modelos.</strong></p>
-          <p>Verifique se o arquivo <code>respostas.json</code> está na mesma pasta que esta página.
-            Se você abriu o arquivo HTML direto no navegador (file://), o navegador pode bloquear o carregamento.
-            Nesse caso, use um servidor local na pasta do projeto:</p>
+          <p>Verifique se o arquivo <code>respostas.json</code> está na mesma pasta que esta página. Se você abriu o arquivo HTML direto no navegador (file://), o navegador pode bloquear o carregamento. Nesse caso, use um servidor local na pasta do projeto:</p>
           <p><code>python -m http.server 8080</code></p>
         </div>
 
@@ -46,7 +61,6 @@
               </div>
             </div>
           </section>
-
           <section id="passo-respostas" class="oculto">
             <div id="area-respostas" class="respostas-area"></div>
           </section>
@@ -55,11 +69,7 @@
     </div>
 
     <div class="toolbar-row">
-      <p class="aviso-pasta">
-        Para atualizar as respostas, clique no botão "Editar" posicionado abaixo de cada resposta. Utilize tags HTML
-        para formatar o texto. Após realizar todas as alterações que desejar, clique em "Baixar JSON" para exportar
-        aquivo. Substitua o arquivo "respostas.json" na pasta raiz do projeto e faça um push no repositório.
-      </p>
+      <p class="aviso-pasta">Para atualizar as respostas, clique no botão "Editar" posicionado abaixo de cada resposta. Utilize tags HTML para formatar o texto. Após realizar todas as alterações que desejar, clique em "Baixar JSON" para exportar o arquivo. Substitua o arquivo "respostas.json" na pasta raiz do projeto e faça um push no repositório.</p>
       <div class="toolbar-buttons">
         <button type="button" class="btn btn-download-json" id="btn-download-json">Baixar JSON</button>
         <button type="button" class="btn btn-cancelar-edicao" id="btn-limpar-edits" style="display:none">Limpar edições</button>

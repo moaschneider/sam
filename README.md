@@ -49,7 +49,12 @@ Ou
    Escolha o tema → subtema → visualize os modelos.
 
 4. **Copiar**  
-   Botão para copiar texto da mensagem padrão personalizada pronta para ser colada no e-mail de resposta.
+   Botão para copiar texto da mensagem padrão personalizada pronta para ser colada no e-mail de resposta. Quando a cópia é concluída, a ferramenta registra o atendimento do dia.
+
+5. **Lista diária de atendimentos**
+   Use o link abaixo do campo de assinatura para abrir a lista do dia. Cada registro inclui horário, primeiro nome do cursista, tema, subtema e caso. O painel mostra o total e permite copiar o resumo ou limpar os registros do dia.
+
+   A lista é armazenada apenas no `localStorage` deste navegador e da origem atual; não é sincronizada entre dispositivos ou atendentes. Registros de dias anteriores são descartados quando a ferramenta é aberta ou utilizada em outro dia. O CPF não aparece na lista copiada ou exibida, mas é mantido no armazenamento local para identificar cópias consecutivas do mesmo cursista; limpar a lista ou iniciar outro dia remove esse dado junto com os registros. E-mail e conteúdo da mensagem não são registrados.
 
 ## Placeholders nos modelos
 
@@ -101,7 +106,7 @@ Mensagem gerada pela ferramenta:
 - **Limpar edições** remove todos os overrides locais.
 - Badge **editado — restaurar** desfaz só a edição atual.
 
-<!-- Chaves no `localStorage`: `atendimento-aprendamais-nome` (assinatura), `atendimento-aprendamais-edits` (edições). -->
+<!-- Chaves no `localStorage`: `atendimento-aprendamais-nome` (assinatura), `atendimento-aprendamais-edits` (edições), `atendimento-aprendamais-lista-diaria` (atendimentos do dia). -->
 
 ## Estrutura de `respostas.json`
 
@@ -200,6 +205,22 @@ Uma outra idéia seria integrar ao próprio dossiê da plataforma e fazer esse p
 Futuramente serão feitas pesquisas sobre essa possibilidade.
 
 
+
+## Próximas melhorias
+
+1. Saída do plain text
+
+   Ajustar `gerar_respostas_md.py` para inserir quebras de linha no plain text. Provavelmente dentro da função `html_para_texto` está removendo "\n".
+
+   Como está exportando atualmente:
+   ```json
+   "texto": "Caro(a) cursista, bem-vindo(a) à Plataforma Aprenda Mais! Parágrafo de teste apenas para testar quebra de parágrafo em plain text . Atenciosamente, (nome do atendente)",
+   ```
+
+   Como deve ficar:
+   ```json
+   "texto": "Caro(a) cursista, bem-vindo(a) à Plataforma Aprenda Mais!\n\nParágrafo de teste apenas para testar quebra de parágrafo em plain text.\n\nAtenciosamente,\n(nome do atendente)",
+   ```
 
 ---
 

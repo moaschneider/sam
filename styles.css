@@ -190,6 +190,28 @@ body {
   border-color: var(--primary);
 }
 
+.atendimentos-link {
+  width: 100%;
+  margin-top: 0.55rem;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--card);
+  color: var(--primary);
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.atendimentos-link:hover,
+.atendimentos-link:focus-visible {
+  border-color: var(--primary);
+  background: #f0f7fb;
+}
+
 /* ═══════════════════════════════════════
    MOBILE SIDEBAR TOGGLE
    ═══════════════════════════════════════ */
@@ -294,6 +316,97 @@ body {
   padding: 0.35rem 0.7rem;
   background: rgba(26, 77, 110, 0.06);
   border-radius: 6px;
+}
+
+/* Daily atendimentos panel */
+
+.atendimentos-painel {
+  margin-bottom: 1.25rem;
+  padding: 1.25rem;
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  scroll-margin-top: 1rem;
+}
+
+.atendimentos-cabecalho {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.atendimentos-cabecalho h2 {
+  color: var(--primary);
+  font-size: 1.1rem;
+}
+
+.atendimentos-data {
+  margin-top: 0.2rem;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+
+.atendimentos-acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.btn-copiar-atendimentos {
+  background: var(--primary);
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+.btn-copiar-atendimentos:hover {
+  background: var(--primary-hover);
+}
+
+.btn-limpar-atendimentos {
+  background: var(--border);
+  color: var(--text);
+  font-size: 0.8rem;
+}
+
+.btn-limpar-atendimentos:hover {
+  background: #d0ccc4;
+}
+
+.lista-atendimentos {
+  display: grid;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.atendimento-item,
+.atendimento-vazio {
+  padding: 0.7rem 0.85rem;
+  border-radius: 6px;
+  background: #fafaf8;
+  font-size: 0.86rem;
+  overflow-wrap: anywhere;
+}
+
+.atendimento-item {
+  border-left: 3px solid var(--accent);
+}
+
+.atendimento-vazio {
+  color: var(--text-muted);
+  border: 1px dashed var(--border);
+}
+
+.status-atendimentos {
+  min-height: 1.2em;
+  margin-top: 0.65rem;
+  color: #2d8a6e;
+  font-size: 0.8rem;
+}
+
+.status-atendimentos.status-erro {
+  color: #a33b32;
 }
 
 /* ═══════════════════════════════════════
@@ -683,6 +796,18 @@ footer a {
 
   .respostas-area {
     padding: 1rem;
+  }
+
+  .atendimentos-painel {
+    padding: 1rem;
+  }
+
+  .atendimentos-cabecalho {
+    display: block;
+  }
+
+  .atendimentos-acoes {
+    margin-top: 0.75rem;
   }
 
   .resposta-texto {

@@ -83,6 +83,21 @@
 ```
 
 
+## Não consegue acessar
+
+#### HTML
+
+```html
+<p>Caro(a) cursista, bem-vindo(a) à Plataforma Aprenda Mais!</p>
+
+<p>Caso esteja com dificuldade para acessar a plataforma, orientamos que verifique sua conexão com a internet e tente acessar novamente utilizando outro navegador (como Chrome, Firefox ou Edge) ou outro dispositivo.</p>
+
+<p>Se, após essas orientações, o problema persistir, entre novamente em contato com o suporte informando o erro apresentado.</p>
+
+<p>Atenciosamente,<br>(nome do atendente)</p>
+```
+
+
 ## Dúvida enviada direto por e-mail
 
 #### HTML
@@ -118,8 +133,45 @@
 ```
 
 
+# Cursos - informações gerais
+
+## Uso da plataforma
+
+### Como se inscrever
+
+#### HTML
+
+```html
+<p>Caro(a) cursista, bem-vindo(a) à Plataforma Aprenda Mais!</p>
+
+<p>Para se inscrever em um curso, acesse a Plataforma Aprenda Mais com seu login e senha. Em seguida, navegue pelo catálogo de cursos disponíveis e selecione o curso de seu interesse.</p>
+
+<p>Ao acessar a página do curso, clique na opção “Inscrever-se”. Após a confirmação, o curso ficará disponível em seu ambiente para início dos estudos.</p>
+
+<p>Caso tenha alguma dificuldade durante a inscrição, entre novamente em contato com o suporte.</p>
+
+<p>Atenciosamente,<br>(nome do atendente)</p>
+```
+
+
 
 # Certificados - casos simples
+
+## Prazo mínimo
+
+### Resposta padrão
+
+#### HTML
+
+```html
+<p>Caro(a) cursista, bem-vindo(a) à Plataforma Aprenda Mais!</p>
+
+<p>Para emitir o certificado, é necessário concluir todas as atividades obrigatórias do curso e atingir a nota mínima exigida, além de respeitar o tempo mínimo de realização. Após o cumprimento desses critérios, o certificado fica disponível automaticamente na plataforma para emissão.</p>
+
+<p>O prazo mínimo para a emissão do certificado é o informado no início de cada curso no bloco lateral direito "Dados Gerais do Curso" no item "Prazo mínimo para obtenção do certificado".</p>
+
+<p>Atenciosamente,<br>(nome do atendente)</p>
+```
 
 ## Segunda via
 
@@ -150,6 +202,23 @@
 
 
 # E-MAIL
+
+## Resolveu o problema sem ajuda do suporte
+
+### Resposta padrão
+
+#### HTML
+
+```html
+<p>Caro(a) cursista, bem-vindo(a) ao Suporte da Plataforma Aprenda Mais!</p>
+
+<p>Verificamos no sistema que você conseguiu acessar sua conta.</p>
+
+<p>Você possui alguma outra dúvida que possamos ajudar?</p>
+
+<p>Atenciosamente,<br>(escreva seu nome)</p>
+```
+
 
 
 ## Usuário não localizado
@@ -477,6 +546,61 @@
 <p>Você pode se inscrever na turma atual deste curso <strong>[NOME DO CURSO]</strong>, já disponível, e realizá-lo novamente.</p>
 
 <p>Sugerimos que leia atentamente o material contido no início do curso intitulado como "Informações Gerais do Curso" para entender como o curso funciona.</p>
+
+<p>Atenciosamente,<br>(nome do atendente)</p>
+```
+
+
+
+# Certificados
+
+## Certificado já emitido
+
+### Dados errados
+
+#### HTML
+
+```html
+<p>Caro(a) cursista, bem-vindo(a) à Plataforma Aprenda Mais!</p>
+
+<p>Compreendemos sua solicitação, porém depois que o certificado é emitido, não pode ser mais alterado. A conferência dos dados no certificado é realizada antes da emissão pelo próprio cursista. Existe uma 1ª etapa somente para essa conferência. Após, existe uma 2ª etapa, onde você confirma que seus dados estão corretos, antes de gerar o certificado.</p>
+
+<p>É responsabilidade do cursista informar seus dados corretamente e fazer a conferência destes antes de emitir o certificado.</p>
+
+<p>Atenciosamente,<br>(nome do atendente)</p>
+```
+
+# Dúvidas não frequentes
+
+## MEC - SISTEC
+
+### Cursos são reconhecidos / Concurso / Horas complementares / Atividades complementares
+
+#### HTML
+
+```html
+<p>Caro(a) cursista, bem-vindo(a) à Plataforma Aprenda Mais!</p>
+
+<p>Os cursos da Plataforma Aprenda Mais são ofertados por instituições da Rede Federal de Educação Profissional, Científica e Tecnológica, vinculadas ao Ministério da Educação (MEC).</p>
+
+<p>Os certificados emitidos são válidos como certificados de cursos livres, podendo ser utilizados para fins de comprovação conforme critérios da instituição ou organização que irá analisá-los.</p>
+
+<p>A aceitação do certificado depende da política da instituição ou órgão para o qual ele será apresentado.</p>
+
+<p>Atenciosamente,<br>(nome do atendente)</p>
+```
+
+
+### Posso fazer graduação / técnico federal e curso na plataforma?
+
+#### HTML
+
+```html
+<p>Caro(a) cursista, bem-vindo(a) à Plataforma Aprenda Mais!</p>
+
+<p>Sim. Não há impedimento para que você realize cursos na Plataforma Aprenda Mais enquanto realiza curso regular em instituição federal.</p>
+
+<p>Os cursos da plataforma são cursos livres e podem ser realizados de forma complementar, de acordo com seu interesse e disponibilidade.</p>
 
 <p>Atenciosamente,<br>(nome do atendente)</p>
 ```
